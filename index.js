@@ -10,6 +10,8 @@ const app = express();
 const port = 3000;
 const host = 'localhost';
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 const homePath = path.join(__dirname, 'home.html');
 const pageBpath = path.join(__dirname, 'pageB.html');
 
