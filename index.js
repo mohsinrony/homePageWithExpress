@@ -14,9 +14,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const homePath = path.join(__dirname, 'home.html');
 const pageBpath = path.join(__dirname, 'pageB.html');
+const pageCpath = path.join(__dirname, 'pageC.html');
 
 app.get('/', (req, res) => {res.sendFile(homePath)});
 app.get('/pageb', (req,res)=> {res.sendFile(pageBpath)});
+app.get('/pagec', (req,res)=> {res.sendFile(pageCpath)});
 
 app.listen(port, host, () => {
   console.log(`Server running at http://${host}:${port}/`);
